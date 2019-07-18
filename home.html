@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Discover your day of birth</title>
+    <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css" media="all" type="text/css">
+  </head>
+  <body>
+    
+    
+    
+    <p>To which gender identity do you identify</p>
+    
+    <form >
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male"><br>
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female"><br>
+    </form>
+    <br>
+    
+    <form>
+      
+        <div class="fallbackDatePicker">
+        
+            <label for="day">Date:</label>
+            <select>
+                <script> 
+                
+                for(var d=1;d<=31;d++)
+                {
+                    document.write("<option>"+d+"</option>");
+                }
+                </script>
+                </select>
+                
+            <label for="month">Month:</label>
+            <select id="month" name="month">
+              <option selected>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          
+          
+            <label for="year">Year:</label>
+            
+            <select>
+                <script> 
+                
+                for(var y=1875;y<=2200;y++)
+                {
+                    document.write("<option>"+y+"</option>");
+                }
+                </script>
+                </select>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+   
+    
+  </body>
+</html>
