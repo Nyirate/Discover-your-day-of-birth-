@@ -13,9 +13,16 @@ p{
 }
 #descri{
   font-size: 24px;
-  color:beige;
+  color:thistle;
 }
 h1{
   text-align: center;
   color:ghostwhite;
+}
+h3{
+  color:whitesmoke;
+  font-weight:bold;
+}
+li{
+  color:white
 }
