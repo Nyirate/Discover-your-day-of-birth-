@@ -26,3 +26,17 @@ h3{
 li{
   color:white
 }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.one {
+  width: 50%;
+
+}
+
+.two {
+  width: 50%;
+}
