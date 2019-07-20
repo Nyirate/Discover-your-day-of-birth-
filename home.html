@@ -9,46 +9,75 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>WELCOME TO DAY DISCOVERY PAGE!!</h1>
+    <h1>WELCOME TO BIRTHDAY DISCOVERY PAGE!!</h1>
     <p id="descri">Many of us know their birthdate but they can't tell on which day they were born on,
     it is so easy with programming.We'll be referring ourselves to Ghana's names that match with the day
     you were born on and gender. Just enter your birthdate and gender. HAVE FUN!</p>
     <br>
-    <div class="well" style="height:250px;width:600px;margin-left:50px;"> 
+    <div class="well" style="height:400px;width:600px;margin-left:250px;"> 
       
       
         <p style="font-weight:bold;">To which gender identity do you identify:</p>
         
         <form >
-          <label for="male" style="margin-left:150px;">Male</label>
+          <label for="male" style="margin-left:200px;">Male</label>
           <input type="radio" name="gender" id="male" value="male"><br>
-          <label for="female" style="margin-left:150px;">Female</label>
+          <label for="female" style="margin-left:200px;">Female</label>
           <input type="radio" name="gender" id="female" value="female"><br>
         </form>
         <br>
         
         <form>
-          <div>
-             <p style="font-weight:bold;">Enter your natal day:</p>
-
-              <label> 
-               <input TYPE="date" NAME="birth" min="1875" max="2200" style="margin-left:150px;">
-                
-              </label>
+          <div style="margin-left:50px;">
+            <p style="font-weight:bold;">Enter your natal day:</p>
+            <br>
+            <label for="date" style="font-weight:bold;margin-left:200px;">Date</label>
+            <br>
+            <input type="number" min="1" max="31" id="date" name="date" style="margin-left:200px;">
+            <br>
+            <label for="month"  style="font-weight:bold;margin-left:200px;">Month</label>
+            <br>
+            <input type="number" min="1" max="12" id="month" name="month" style="margin-left:200px;">
+            <br>
+            <label for="year" style="font-weight:bold;margin-left:200px;">Year</label>
+            <br>
+            <input type="number" min="1875" max="2200" id="year" name="year" style="margin-left:200px;">
+            <br>
           </div>
           <br>
-          <input type="submit" value="Submit" style="margin-left:150px;">
+          <button onclick="chel()" style="margin-left:200px;margin-top:20px;">Submit</button> 
+          <br>
+          <p id="answer"></p>
+          
         </form>
-        <script src="day discovery.js">
-          function add(){
-            var cc=parseFloat("enter the month")
-          }
-
         
-
-        </script>
     </div>
-   
+       
     <footer style="margin-top:20%;text-align: center;color:whitesmoke;font-size:20px;">Copyright@Emma2019</footer>
+    <script src="day discovery.js">
+        function chel(form){
+          var leti=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+          var date= document.forms["date"].value;
+          var month= document.forms["month"].value;
+          var year= document.forms["year"].value;
+          var gender= document.forms["gender"].value;
+          var aa=parseInt(date);
+          var bb=parseInt(month);
+          var yy=parseInt(year);
+          var cc=((yy-1)/100+1);
+          var result=(cc/4-2*cc-1+5*yy/4+ 26*(bb+1)/10 + aa  % 7);
+          
+          if(yy<1875 && yy>2200){
+            alert("Invalid year")
+          }
+          else if(bb<=0 && bb>12){
+            alert("Invalid month")
+          }
+          else if(aa<=0 && aa>31){
+            alert("invalid date ")
+          }
+          document.getElementById("answer").innerHTML=Math.round(answer);
+          }
+    </script>
   </body>
 </html>
