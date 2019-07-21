@@ -101,13 +101,14 @@
       function chel() {
         var leti = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         var DD = document.getElementById("date").value;
-        console.log(date)
+        console.log(DD)
         var MM = document.getElementById("month").value;
-        console.log(month)
+        console.log(MM)
         var YY = document.getElementById("year").value;
-        console.log(year)
-        var CC = (YY - 1) / 100 + 1;
-        var result = (CC/4 -2*CC-1 + 5*YY/4 + 26*(MM+1)/10 + DD ) % 7;
+        console.log(YY)
+        var CC = parseInt((YY - 1) / 100) + 1;
+        console.log(CC);
+        var result = (CC / 4 - 2 * CC - 1 + 5 * YY / 4 + 26 * (MM + 1) / 10 + DD ) % 7;
         console.log(Math.round(result));
         confirm(Math.round(result));
 
@@ -115,28 +116,28 @@
         var female = ["Akosua", " Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"]
 
         var gender = document.querySelector('input[name="gender"]:checked').value;
-      
+        console.log(gender);
 
         if (MM <= 0 || MM > 12) {
           confirm("Invalid month");
         }
-        else if (DD <= 0 || DD > 31) {
+        if (DD <= 0 || DD > 31) {
           confirm("invalid date ");
         }
 
-        else if (gender == "male") {
+        if (gender == "male") {
           confirm(gender);
           console.log(male[Math.round(result)]);
           document.getElementById("read").innerHTML = "Your name is " + male[Math.round(result)];
         }
         else if (gender == "female") {
           confirm(gender);
-          console.log(male[Math.round(result)]);
+          console.log(female[Math.round(result)]);
           document.getElementById("read").innerHTML = "Your name is " + female[Math.round(result)];
         }
 
         else {
-          console.log("result");
+          console.log(result);
         }
 
       }
