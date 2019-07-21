@@ -57,7 +57,9 @@
     </div>
     <br>
 
-    <div class="well" style="height:400px;width:600px;margin-left:300px;margin-top:100px;">
+    <h4>Fill the form below.</h4>
+
+    <div class="well" style="height:400px;width:600px;margin-left:250px;margin-top:120px;">
 
 
       <p style="font-weight:bold;">To which gender identity do you identify:</p>
@@ -96,7 +98,7 @@
 
     </div>
 
-    <footer style="margin-top:10%;text-align: center;color:whitesmoke;font-size:20px;">Copyright@Emma2019</footer>
+    <footer style="margin-top:15%;text-align: center;color:whitesmoke;font-size:20px;">Copyright@Emma2019</footer>
     <script>
       function chel() {
         var leti = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -106,8 +108,7 @@
         console.log(MM)
         var YY = document.getElementById("year").value;
         console.log(YY)
-        var CC = parseInt((YY - 1) / 100) + 1;
-        console.log(CC);
+        var CC = (YY - 1) / 100 + 1;
         var result = (CC / 4 - 2 * CC - 1 + 5 * YY / 4 + 26 * (MM + 1) / 10 + DD ) % 7;
         console.log(Math.round(result));
         confirm(Math.round(result));
@@ -121,7 +122,7 @@
         if (MM <= 0 || MM > 12) {
           confirm("Invalid month");
         }
-        if (DD <= 0 || DD > 31) {
+        else if (DD <= 0 || DD > 31) {
           confirm("invalid date ");
         }
 
