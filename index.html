@@ -56,12 +56,12 @@
       </div>
     </div>
     <br>
+    
 
-    <h4>Fill the form below.</h4>
+    <div class="well" style="height:500px;width:600px;margin-left:290px;margin-top:180px;">
 
-    <div class="well" style="height:400px;width:600px;margin-left:250px;margin-top:120px;">
-
-
+      <h4>Fill this form.</h4>
+      
       <p style="font-weight:bold;">To which gender identity do you identify:</p>
 
       <form>
@@ -102,6 +102,8 @@
     <script>
       function chel() {
         var leti = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", " Yaw", "Kofi", "Kwame"];
+        var female = ["Akosua", " Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"];
         var DD = document.getElementById("date").value;
         console.log(DD)
         var MM = document.getElementById("month").value;
@@ -109,12 +111,12 @@
         var YY = document.getElementById("year").value;
         console.log(YY)
         var CC = (YY - 1) / 100 + 1;
+        console.log(Math.round(CC));
         var result = (CC / 4 - 2 * CC - 1 + 5 * YY / 4 + 26 * (MM + 1) / 10 + DD ) % 7;
         console.log(Math.round(result));
         confirm(Math.round(result));
 
-        var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", " Yaw", "Kofi", "Kwame"]
-        var female = ["Akosua", " Adwoa", "Abenaa", "Akua", " Yaa", "Afua", "Ama"]
+        
 
         var gender = document.querySelector('input[name="gender"]:checked').value;
         console.log(gender);
@@ -122,7 +124,7 @@
         if (MM <= 0 || MM > 12) {
           confirm("Invalid month");
         }
-        else if (DD <= 0 || DD > 31) {
+        if (DD <= 0 || DD > 31) {
           confirm("invalid date ");
         }
 

@@ -45,6 +45,13 @@ li{
   background-image:url("https://www.pixel-creation.com/wp-content/uploads/plain-dark-blue-backgroundlythronax-on-deviantart-800x800.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width:700px;
+  width:600px;
   margin-left:20%;
+}
+h4{
+  text-align: center;
+  color:darkblue;
+  font-weight: bold;
+  font-size:20px;
+  line-height: 2;
 }
