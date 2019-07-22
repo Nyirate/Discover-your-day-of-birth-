@@ -6,25 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Discover your day of birth</title>
-    <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css" media="all" type="text/css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" media="all" type="text/css">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <h1>THE AKAN NAME CORRESPONDING TO YOUR BIRTHDAY</h1>
+    <h1>THE AKAN NAME ACCORDING TO YOUR BIRTHDAY</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="well" style="margin-top:20px;height:380px;">
+          
+          <br>
+          <p id="descri">Many of us know their birthdate but they can't tell on which day they were born on,
+            it is so easy with programming.We'll be referring ourselves to Akan names that match with the day
+            you were born on and gender. Just enter your birthdate and gender. HAVE FUN!</p>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-6">
+        <div class="well">
+          <h2 style="text-align: center;color:white;font-weight: bold;">WHAT IS AKANA NAME?</h2>
+          <br>
+          <p style="color:beige;font-size: 23px;">The Akan people of Ghana and the Ivory Coast frequently name their children
+            after the day of the week
+            they were born and the order in which they were born. These "day names" have further meanings
+            concerning the soul and character of the person. This naming tradition is shared throughout West Africa
+            and the African diaspora. </p>
+          <br>
+        </div>
+      </div>
+    </div>
+
     <br>
-    <p id="descri">Many of us know their birthdate but they can't tell on which day they were born on,
-      it is so easy with programming.We'll be referring ourselves to Akan names that match with the day
-      you were born on and gender. Just enter your birthdate and gender. HAVE FUN!</p>
     <br>
-    <h2 style="text-align: center;color:white;">WHAT IS AKANA NAME?</h2>
     <br>
-    <p style="color:beige;font-size: 23px;">The Akan people of Ghana and the Ivory Coast frequently name their children
-      after the day of the week
-      they were born and the order in which they were born. These "day names" have further meanings
-      concerning the soul and character of the person. This naming tradition is shared throughout West Africa
-      and the African diaspora. </p>
-    <br>
+
+
     <div class="list">
       <div class="one">
         <h3>List of Akan names:Female</h3>
@@ -58,7 +75,7 @@
     <br>
     
 
-    <div class="well" style="height:500px;width:600px;margin-left:290px;margin-top:180px;">
+    <div class="jumbotron" style="height:550px;width:600px;margin-left:290px;margin-top:170px;">
 
       <h4>Fill this form.</h4>
       
@@ -110,9 +127,10 @@
         console.log(MM)
         var YY = document.getElementById("year").value;
         console.log(YY)
-        var CC = (YY - 1) / 100 + 1;
-        console.log(Math.round(CC));
-        var result = (CC / 4 - 2 * CC - 1 + 5 * YY / 4 + 26 * (MM + 1) / 10 + DD ) % 7;
+        var CC = (YY / 100) + 1;
+        var b=parseInt(CC);
+        console.log(parseInt(b));
+        var result = ( ( (b/4) -2*b-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
         console.log(Math.round(result));
         confirm(Math.round(result));
 
@@ -124,7 +142,9 @@
         if (MM <= 0 || MM > 12) {
           confirm("Invalid month");
         }
-        if (DD <= 0 || DD > 31) {
+        
+
+        else if (DD <= 0 || DD > 31) {
           confirm("invalid date ");
         }
 

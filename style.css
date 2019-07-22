@@ -12,12 +12,13 @@ p{
  
 }
 #descri{
-  font-size: 24px;
+  font-size: 26px;
   color:beige;
 }
 h1{
   text-align: center;
   color:ghostwhite;
+  font-weight: bold;
 }
 h3{
   color:whitesmoke;
@@ -54,4 +55,7 @@ h4{
   font-weight: bold;
   font-size:20px;
   line-height: 2;
+}
+.well{
+  background-image:url("https://www.pixel-creation.com/wp-content/uploads/plain-dark-blue-backgroundlythronax-on-deviantart-800x800.jpg");
 }
